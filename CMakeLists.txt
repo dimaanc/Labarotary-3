@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 2.8) #Проверка версии CMake.
 set(PROJECT_NAME Lab2_3) #Создаем обычную локальную переменную с именем проекта
 project(${PROJECT_NAME}) # Название проекта
 
-set(QueueLib QueueLib) 
-set(SteckLib SteckLib) 
+set(QueueLibrary QueueLibrary) 
+set(SteckLibrary SteckLibrary) 
 set(main main)
 
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Configs" FORCE) #Создается переменная CMAKE_CONFIGURATION_TYPES со значением "Debug;Release" и меткой/разделом Configs, переменная сохраниется в специальном файле доступном из всех файлов,
@@ -16,7 +16,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/QueueLib ${CMAKE_CURRENT_SOURCE_
 #${CMAKE_CURRENT_SOURCE_DIR} - стандартная переменная с адресом рабочей директории
 
 add_subdirectory(gtest) #Добавляем директорию с под-CMakeList-ом, и выполняем под-CMakeList
-add_subdirectory(QueueLib)
-add_subdirectory(SteckLib)
+add_subdirectory(QueueLibrary)
+add_subdirectory(SteckLibrary)
 add_subdirectory(main)
 add_subdirectory(test)
